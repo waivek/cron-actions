@@ -10,7 +10,13 @@ jobs:
   cronjob:
     runs-on: self-hosted
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2.3.1
+        with:
+          python-version: 3.7.1
+          cache: pip
+      - run: pip install -r requirements.txt
+      - run: pip install https://github.com/waivek/python_common/archive/master.zip
       - uses: actions/checkout@v2
       - name: Run CRON Job
         run: python run_cron.py
