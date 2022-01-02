@@ -5,7 +5,7 @@ name: CRON
 
 on:
   schedule:
-      - cron: '2 * * * *'
+      - cron: '*/5 * * * *'
 jobs:
   cronjob:
     runs-on: self-hosted
