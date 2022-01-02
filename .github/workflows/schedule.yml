@@ -6,6 +6,7 @@ name: CRON
 on:
   schedule:
       - cron: '*/5 * * * *'
+  workflow_dispatch:
 jobs:
   cronjob:
     runs-on: self-hosted
