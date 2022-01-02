@@ -5,9 +5,9 @@ name: CRON
 
 on:
   schedule:
-      - cron: 6 * * * *
+      - cron: '6 * * * *'
 jobs:
-  build:
+  cronjob:
     runs-on: self-hosted
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
