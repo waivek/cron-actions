@@ -13,5 +13,7 @@ jobs:
           python-version: 3.9.1
           cache: pip
       - uses: actions/checkout@v2
+      - name: Upgrade pysqlite
+        run: sudo pip install --upgrade pysqlite
       - name: Test Upsert
         run: python test_upsert.py
