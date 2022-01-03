@@ -1,5 +1,10 @@
+
 def sqlite3_test():
-    import sqlite3
+    import sys
+    if sys.platform == "linux":
+        import pysqlite3 as sqlite3
+    else:
+        import sqlite3
 
     pysqlite_version = sqlite3.version
     sqlite_version = sqlite3.sqlite_version
