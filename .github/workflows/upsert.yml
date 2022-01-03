@@ -1,19 +1,16 @@
 
-name: TestUpsert
+name: PythonUpsert
 
 on:
   workflow_dispatch:
 jobs:
-  testupsert:
+  pythonupsert:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2.3.1
         with:
-          python-version: 3.9.1
+          python-version: 3.7.1
           cache: pip
-      - uses: actions/checkout@v2
-      - name: Upgrade pysqlite
-        run: sudo pip install --upgrade pysqlite
-      - name: Test Upsert
+      - name: Python Upsert
         run: python test_upsert.py
