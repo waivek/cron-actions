@@ -1,0 +1,13 @@
+
+
+name: CliUpsert
+
+on:
+  workflow_dispatch:
+jobs:
+  cliupsert:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: CLI Upsert
+        run: sqlite3 sqlite_test.db < upsert.sql
