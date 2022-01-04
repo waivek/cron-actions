@@ -12,5 +12,7 @@ jobs:
         with:
           python-version: 3.7.1
           cache: pip
+      - name: Python Common
+        run: pip install https://github.com/waivek/python_common/archive/master.zip
       - name: Python Upsert
         run: python test_upsert.py
